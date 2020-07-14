@@ -1,3 +1,7 @@
 <p *ngIf="open" style="padding: 20px; background-color: yellow;">
-  modal works! <button type="button" (click)="closeModal()"><b>X</b></button>
+  modal works!
+  <button type="button" (click)="closeModal()"><b>X</b></button>
+
+  <input type="text" name="search" [(ngModel)]="model.search" #search  />
+  {{model.search}}
 </p>

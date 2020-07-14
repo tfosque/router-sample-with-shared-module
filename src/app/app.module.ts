@@ -1,29 +1,29 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { SharedModule } from './modules/shared.module';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ModalComponent } from './modal/modal.component';
-import { NotificationComponent } from './notification/notification.component';
 import { NavComponent } from './nav/nav.component';
-import { ShoppingCartComponent } from './shopping-cart/shopping-cart.component';
-import { TemplatesComponent } from './templates/templates.component';
 import { BreadCrumbsComponent } from './nav/bread-crumbs/bread-crumbs.component';
+import { IndexComponent } from './index/index.component';
+import { LineItemComponent } from './line-item/line-item.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    ModalComponent,
-    NotificationComponent,
     NavComponent,
-    ShoppingCartComponent,
-    TemplatesComponent,
-    BreadCrumbsComponent
+    BreadCrumbsComponent,
+    IndexComponent,
+    LineItemComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SharedModule
   ],
+  exports: [],
   providers: [],
   bootstrap: [AppComponent]
 })

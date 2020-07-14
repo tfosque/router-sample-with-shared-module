@@ -8,12 +8,18 @@ import { NotificationService } from '../services/notification.service';
   styleUrls: ['./modal.component.scss']
 })
 export class ModalComponent implements OnInit {
+  model: any = {};
   open = false;
+
+  // public search: string;
+
 
   constructor(
     private readonly modalService: ModalService,
     private readonly notificationService: NotificationService
-  ) { }
+  ) {
+    this.model.search = '';
+  }
 
   ngOnInit(): void {
     this.modalService.open.subscribe(isOpen => {
